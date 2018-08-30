@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    If not stated otherwise in this file or this component's Licenses.txt file the
+    following copyright and licenses apply:
+   
+    Copyright 2018 RDK Management
+   
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+   
+    http://www.apache.org/licenses/LICENSE-2.0
+   
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/aop
+	    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <!-- Activate @Configurable injection that allows advising of non-spring
+      managed objects. You get dependency injection even using new Object()! -->
+    <!-- <context:spring-configured /> -->
+    <!-- Component scan to find all Spring components -->
+    <context:component-scan base-package="com.comcast.xconf" />
+
+    <task:annotation-driven />
+    <aop:aspectj-autoproxy />
+
+    <!--<mvc:annotation-driven conversion-service="conversionService" />-->
+
+
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>WEB-INF/messages</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="mappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
+        <property name="objectMapper">
+            <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                <property name="serializationInclusion">
+                    <util:constant static-field="com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL"/>
+                </property>
+                <property name="featuresToDisable">
+                    <array>
+                        <util:constant static-field="com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES"/>
+                    </array>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="mappingJackson2XmlHttpMessageConverter" class="org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter" >
+        <property name="objectMapper">
+            <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                <property name="createXmlMapper" value="true"/>
+                <property name="serializationInclusion">
+                    <util:constant static-field="com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL"/>
+                </property>
+                <property name="featuresToDisable">
+                    <array>
+                        <util:constant static-field="com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES"/>
+                    </array>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="loginAspect" class="com.comcast.xconf.util.LoggingAspect"></bean>
+
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <!-- <mvc:annotation-driven /> -->
+    <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters>
+            <ref bean="mappingJackson2HttpMessageConverter"/>
+            <ref bean="mappingJackson2XmlHttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+</beans>

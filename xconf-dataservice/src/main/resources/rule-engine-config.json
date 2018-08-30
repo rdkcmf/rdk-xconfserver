@@ -1,0 +1,8 @@
+{
+    "evaluatorClasses":["com.comcast.xconf.LocalTimeGTEEvaluator", "com.comcast.xconf.LocalTimeLTEEvaluator",
+        "com.comcast.xconf.evaluators.TimeGTEEvaluator", "com.comcast.xconf.evaluators.TimeLTEEvaluator",
+        "com.comcast.xconf.evaluators.NsListInEvaluator", "com.comcast.xconf.evaluators.IpAddressGroupEvaluator",
+        "com.comcast.xconf.evaluators.MatchOperationEvaluator"
+    ],
+    "allowDefaultOperationsOverrides":false
+}

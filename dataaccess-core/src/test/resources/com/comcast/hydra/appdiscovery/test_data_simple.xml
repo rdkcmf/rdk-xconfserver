@@ -1,0 +1,103 @@
+<!--
+    If not stated otherwise in this file or this component's Licenses.txt file the
+    following copyright and licenses apply:
+   
+    Copyright 2018 RDK Management
+   
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+   
+    http://www.apache.org/licenses/LICENSE-2.0
+   
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
+<SimplePresentation>
+    <SimpleModule>
+        <data>
+            <feed>
+                <!--entry>
+                    <title>MyTV</title>
+                    <link type="text/xre" href="xre:///guide/mytv?focus=menu&amp;clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+					<link type="text" href="MENU_MYTV" rel="normalImage"/>
+					<link type="text" href="MENU_MYTV_HIGHLIGHT" rel="focusImage"/>
+					<link type="text" href="LEFT" rel="align" />
+                </entry-->
+				<entry>
+                    <title>Guide</title>
+                    <link type="text/xre" href="xre:///guide/channel_grid?clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+					<link type="text" href="MENU_GUIDE" rel="normalImage"/>
+					<link type="text" href="MENU_GUIDE_HIGHLIGHT" rel="focusImage"/>
+					<link type="text" href="LEFT" rel="align" />
+                </entry>
+				<entry isDvr="true">
+                    <title>DVR</title>
+                    <link type="text/xre" href="xre:///guide/mytv/dvr?focus=menu&amp;clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+                    <link type="text" href="MENU_DVR" rel="normalImage"/>
+                    <link type="text" href="MENU_DVR_HIGHLIGHT" rel="focusImage"/>
+					<link type="text" href="LEFT" rel="align" />
+                </entry>
+                <entry>
+                    <title>On Demand</title>
+                    <link type="text/xre" href="xre:///guide/on_demand?focus=menu&amp;clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+                    <link type="text" href="MENU_ON_DEMAND" rel="normalImage"/>
+                    <link type="text" href="MENU_ON_DEMAND_HIGHLIGHT" rel="focusImage"/>
+                    <link type="text" href="LEFT" rel="align" />
+                </entry>
+                <entry>
+                    <title>Apps</title>
+                    <!--link type="text/xre" href="xre:///guide/dashboard" rel="action"/-->
+					<!--link type="text/xre" href="xre:///guide/apps/gallery?focus=gallery" rel="action"/-->
+                    <link type="text/xre" href="xre:///guide/guide_applications_list?clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+					<link type="text" href="MENU_APPS" rel="normalImage"/>
+					<link type="text" href="MENU_APPS_HIGHLIGHT" rel="focusImage"/>
+					<link type="text" href="LEFT" rel="align" />
+					<link type="text" href="HD" rel="aspectRatio" />
+                </entry>
+                <entry>
+                    <title>Divider</title>
+                    <!-- Use an empty action for dividers to prevent setting focus on it -->
+                    <link type="text/xre" href="" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+                    <link type="text" href="MENU_DIVIDER" rel="normalImage"/>
+                    <link type="text" href="MENU_DIVIDER" rel="focusImage"/>
+                    <link type="text" href="RIGHT" rel="align" />
+                    <link type="text" href="HD" rel="aspectRatio" />
+                </entry>
+                <entry>
+                    <title>Search</title>
+                    <link type="text/xre" href="xre:///guide/sview_search?focus=menu&amp;clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+                    <link type="text" href="MENU_SEARCH" rel="normalImage"/>
+                    <link type="text" href="MENU_SEARCH_HIGHLIGHT" rel="focusImage"/>
+                    <link type="text" href="RIGHT" rel="align" />
+                </entry>
+                <entry>
+                    <title>Settings</title>
+                    <link type="text/xre" href="xre:///guide/settings?focus=menu&amp;clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+                    <link type="text" href="MENU_SETTINGS" rel="normalImage"/>
+                    <link type="text" href="MENU_SETTINGS_HIGHLIGHT" rel="focusImage"/>
+                    <link type="text" href="RIGHT" rel="align" />
+                </entry>
+<!--                <entry>
+                    <title>Friends</title>
+                    <link type="text/xre" href="xre:///guide/Social_TV?clearStack=true" rel="action"/>
+                    <link type="image/png" href="{STATIC_FILES_BASE_URL}/com/comcast/guide/skins/button_normal.png" rel="image"/>
+					<link type="text" href="MENU_FRIENDS" rel="normalImage"/>
+					<link type="text" href="MENU_FRIENDS_HIGHLIGHT" rel="focusImage"/>
+					<link type="text" href="RIGHT" rel="align" />
+                </entry>-->
+            </feed>
+        </data>
+    </SimpleModule>
+</SimplePresentation>

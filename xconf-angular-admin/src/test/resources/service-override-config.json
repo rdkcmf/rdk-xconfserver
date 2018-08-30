@@ -1,0 +1,13 @@
+{
+    "autoGenerateSchema" : true,
+    "connectionPools": {
+        "SharedConnectionPool": {
+            "seeds": [ "localhost:9180" ],
+            "autoDiscoverHosts": false,
+            "keyspaceName": "ApplicationsDiscoveryDataService",
+            "localDatacenter": "",
+            "maxConnsPerHost": 15,
+            "useConnectionPoolMonitor": true
+        }
+    }
+}

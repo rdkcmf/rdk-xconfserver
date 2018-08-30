@@ -1,0 +1,31 @@
+Apache Commons Configuration and Apache Shindig OpenSocial:
+Copyright 2001-2013 The Apache Software Foundation
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+Apache Common Configuration:
+See: com.comcast.hydra.astyanax.util.PropertiesConfiguration
+Apache Shindig OpenSocial API:
+See: com.comcast.hesperius.dataaccess.support.BufferedServletRequestWrapper
+
+Copyright 2018 RDK Management
+Licensed under the Apache License, Version 2.0
+
+Copyright 2013 Netflix, Inc.
+Licensed under the Apache License, Version 2.0
+(Part of astyanax)
+
+Copyright 2011 Netflix
+Licensed under the Apache License, Version 2.0
+(Part of astyanax)
+
+Copyright 2010 Martin Grotzke
+Licensed under the Apache License, Version 2.0
+(Part of kryo-serializers)
+
+Copyright (C) 2009 The Guava Authors
+Licensed under the Apache License, Version 2.0
+(Guava: Google Core Libraries for Java)
+
+Refer to the Project Object Model and README file for external component
+dependencies.
