@@ -185,11 +185,6 @@
             <artifactId>ruleengine-common</artifactId>
              <version>${project.version}</version>
         </dependency>
-         <dependency>
-                <groupId>com.comcast.coast.xconf.oss</groupId>
-                <artifactId>tcp-logging</artifactId>
-             <version>${project.version}</version>
-         </dependency>
             <dependency>
                 <groupId>com.comcast.coast.xconf.oss</groupId>
                 <artifactId>healthcheck</artifactId>

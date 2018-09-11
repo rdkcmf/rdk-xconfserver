@@ -57,11 +57,6 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>com.comcast.coast.xconf.oss</groupId>
-			<artifactId>tcp-logging</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
