@@ -78,7 +78,7 @@
 		<javax.ws.rs-api>2.0.1</javax.ws.rs-api>
         <aspectjweaver.version>1.7.4</aspectjweaver.version>
         <woodstox-core-asl.version>4.4.1</woodstox-core-asl.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
         <commons-validator.version>1.4.1</commons-validator.version>
         <bcprov-jdk16.version>1.46</bcprov-jdk16.version>
         <bcpkix-jdk15on.version>1.54</bcpkix-jdk15on.version>
