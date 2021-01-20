@@ -47,7 +47,7 @@
         <spring.security.version>4.0.1.RELEASE</spring.security.version>
         <jackson-asl.version>1.9.2</jackson-asl.version> <!-- should satisfy jersey.version -->
         <testng-version>6.8.1</testng-version>
-        <fasterxml.version>2.4.1</fasterxml.version>
+        <fasterxml.version>2.12.1</fasterxml.version>
         <fasterxml.dataformat.version>2.5.3</fasterxml.dataformat.version>
        	<joda-time.version>2.3</joda-time.version>
         <guava.version>17.0</guava.version>
